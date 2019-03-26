@@ -1,0 +1,16 @@
+:root {
+	--fontN: "Roboto";
+
+	--principal: #011627;
+	--secundario: #F15025;
+	--tercero: #CED0CE;
+
+	--white: #fff;
+	--green: limegreen;
+	--dblue: #252233;
+	--resalte:  #252233;
+	--disabled: #888;
+
+
+	--bradius: 2px;
+}

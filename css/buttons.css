@@ -1,0 +1,17 @@
+.btn-circle{
+	vertical-align: middle;
+	border-radius: 1000px;
+	background-color: red;
+	min-width: 45px;
+	max-width: 45px;
+	min-height: 45px;
+	max-height: 45px;
+}
+
+button{
+	border: 0px;
+	outline: none;
+}
+button img{
+	vertical-align: middle;
+}
