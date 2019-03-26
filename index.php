@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="icon" type="image/png" href="./images/icono.png" />
 	<link rel="stylesheet" type="text/css" href="css/colores.css">
+	<link rel="stylesheet" type="text/css" href="css/elementos.css">
 	<link rel="stylesheet" type="text/css" href="css/buttons.css">
 	<link rel="stylesheet" type="text/css" href="css/general.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
@@ -20,15 +21,13 @@
 		</div>
 	</div>
 	<div id="board">
-		
+		<?php require './content/elemento.php'; ?>
 	</div>
 	<footer>
 		Todos los derechos reservados @ Raul Moreno
 	</footer>
-	<div id="controls">
-		<button id="btn-add" class="btn-circle">
-			<img src="images/add.png">
-		</button>
-	</div>
+	<button id="btn-add" class="btn-circle">
+		<img src="images/add.png">
+	</button>
 </body>
 </html>

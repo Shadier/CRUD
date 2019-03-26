@@ -1,0 +1,92 @@
+.xbox{
+	background-color: green;
+	color: white;
+}
+.switch{
+	background-color: rgb(200,0,0);
+	color: white;
+}
+.play{
+	background-color: #0a4494;
+	color: white;
+}
+
+.elemento{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	display: inline-block;
+	border-radius: 5px;
+	min-width: 100px;
+	width: 80%;
+	max-width: 500px;
+	-webkit-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+	transition: all 0.5s;
+}
+.elemento:hover{
+	-webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 7px -2px rgba(0,0,0,1);
+	box-shadow: 0px 0px 7px -2px rgba(0,0,0,1);
+	transition: all 0.5s;
+}
+	.elemento .data{
+		box-sizing: border-box;
+		position: relative;
+		display: inline-block;
+		min-width: calc(100% - 100px);
+		max-width: calc(100% - 100px);
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+		.elemento .name{
+			font-weight: bold;
+			padding-left: 15px;
+			display: block;
+			text-align: left;
+		}
+		.elemento .details{
+			font-size: 14px;
+			padding-left: 15px;
+			margin-top: 5px;
+			text-align: left;
+		}
+			.elemento .details .plataform,
+			.elemento .details .players{
+				padding-left: 10px;
+				padding-right: 10px;
+				border-radius: 100px;
+				display: inline-block;
+				margin-right: 5px;
+			}
+			.elemento .details .players{
+				background-color: orange;
+				color: white;
+			}
+
+	.elemento .edit,
+	.elemento .delete{
+		vertical-align: top;
+		box-sizing: border-box;
+		position: relative;
+		display: inline-block;
+		min-width: 50px;
+		max-width: 50px;
+		min-height: 54px;
+		background-color: var(--cuarto);
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.elemento .edit:hover,
+	.elemento .delete:hover{
+		cursor: pointer;
+		background-color: #1083e5;
+	}
+
+
+	.elemento .delete img,
+	.elemento .edit img{
+		padding-top: 5px;
+		vertical-align: middle;
+	}
