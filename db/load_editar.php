@@ -4,7 +4,7 @@
 ?>
 <h4>EDITAR JUEGO</h4>
 <label>NOMBRE:</label><br>
-<input type="text" name="nombre-juego" value="<?php echo $fila['name'];?>"><br>
+<input required type="text" name="nombre-juego" value="<?php echo $fila['name'];?>"><br>
 <label>PLATAFORMA:</label><br>
 <select name="plataforma-juego">
 	<option <?php if($fila['plataform']=="XBOX 360") echo "selected";?>>XBOX 360</option>

@@ -11,9 +11,9 @@
 		$database = "games_crud";
  	}else{
  		$server = "localhost";
-		$username = "u315290390_root";
+		$username = "u315290390_crud";
 		$password = "Morelia1";
-		$database = "u315290390_curso";
+		$database = "u315290390_crud";
  	}
 	
 	$con = mysqli_connect($server, $username, $password, $database);

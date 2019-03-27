@@ -1,5 +1,5 @@
 <?php 
-	require_once './db/consultas.php';
+	require_once '../db/consultas.php';
 	$sql = "SELECT * FROM game;";
 	$rs = mysqli_query($con, $sql);
 	$count = 0;

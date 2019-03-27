@@ -17,9 +17,7 @@
 			break;
 	}
 	//Una vez que tenemos nuestra variable completa es cuestión de agregar la clase
-	if(executeQuery("UPDATE game SET
-		name = '".$_POST["nombre-juego"]."', plataform = '".$_POST["plataforma-juego"]."', color = '$color', players = '".$_POST["jugadores-juego"]."' WHERE id = $_GET[id];"))
-	
-	header( "Location: ../index.php");
+	executeQuery("UPDATE game SET
+		name = '".$_POST["nombre-juego"]."', plataform = '".$_POST["plataforma-juego"]."', color = '$color', players = '".$_POST["jugadores-juego"]."' WHERE id = $_GET[id];");
 
 ?>

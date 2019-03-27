@@ -101,3 +101,60 @@ $("#opaque").click(function(event){
 function closealert(){
 	$("#alerta").removeClass("show");
 }
+
+$('#frm-editar').submit(function(event) {
+  event.preventDefault();
+  $.ajax({
+        type: 'POST',
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        // Mostramos un mensaje con la respuesta de PHP
+        success: function(data) {
+        	reloadData();
+        	$("#boardEdit").scrollTop(0);
+			$("#boardAdd").scrollTop(0);
+			$("#boardEdit").removeClass("show");
+			$("#boardAdd").removeClass("show");
+			$("#btn-add").removeClass("rotar");
+           	$("#alerta").text("¡Editado correctamente!");
+	      	$("#alerta").addClass("show");
+			setTimeout("closealert()", 2500);        }
+    })        
+    return false;
+}); 
+
+
+$('#frm-add').submit(function(event) {
+  event.preventDefault();
+  $.ajax({
+        type: 'POST',
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        // Mostramos un mensaje con la respuesta de PHP
+        success: function(data) {
+        	reloadData();
+        	$("#btn-add").toggleClass("rotar");
+			$("#boardEdit").scrollTop(0);
+			$("#boardAdd").scrollTop(0);
+			$("#frm-add")[0].reset();
+			$("#boardEdit").removeClass("show");
+			$("#boardAdd").removeClass("show");
+			$("#btn-add").removeClass("rotar");
+           	$("#alerta").text("¡Agregado correctamente!");
+	      	$("#alerta").addClass("show");
+			setTimeout("closealert()", 2500);        }
+    })        
+    return false;
+}); 
+
+function reloadData(){
+	$.ajax({
+	    type: 'GET',
+	    url: "./content/elemento.php",
+	    // Mostramos un mensaje con la respuesta de PHP
+	    success: function(data) {
+	    	$("#board").empty();
+	      	$("#board").append(data);
+	    }
+	 });
+}

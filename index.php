@@ -38,16 +38,52 @@
 		</div>
 	</div>
 	<div id="board">
-		<?php require './content/elemento.php'; ?>
+		<?php 
+		require_once 'db/consultas.php';
+		$sql = "SELECT * FROM game;";
+		$rs = mysqli_query($con, $sql);
+		$count = 0;
+		while ($fila = mysqli_fetch_array($rs)) :
+			$count++;
+		?>
+		<div class="row">
+		<div class="elemento">
+			<div class="data">
+				<div class="name">
+					<?php echo $fila['name']; ?>
+				</div>
+				<div class="details">
+					<div class="plataform <?php echo $fila[color]; ?>">
+						<?php echo $fila['plataform']; ?>
+					</div>
+					<div class="players">
+						<?php echo $fila['players']; ?>
+					</div>
+				</div>
+			</div><div class="edit" id="<?php echo $fila['id']; ?>">
+				<img src="./images/edit.png">
+			</div><div class="delete" id="<?php echo $fila['id']; ?>">
+				<img src="./images/delete.png">
+			</div>
+		</div>
+		</div>
+		<?php 
+			endwhile;
+			if ($count < 1):
+		?>
+			<H6>NO HAY NINGÚN ELEMENTO AGREGADO</H6>
+		<?php
+			endif;
+		?>
 	</div>
 	<div id="boardAdd">
 		<form id="frm-add" method="post" action="db/add_juego.php">
 			<h4>AGREGAR JUEGO</h4>
 			<label>NOMBRE:</label><br>
-			<input type="text" name="nombre-juego"><br>
+			<input required type="text" name="nombre-juego"><br>
 			<label>PLATAFORMA:</label><br>
-			<select name="plataforma-juego">
-				<option selected hidden>Seleccionar...</option>
+			<select required name="plataforma-juego">
+				<option value="" selected hidden>Seleccionar...</option>
 				<option>XBOX 360</option>
 				<option>XBOX ONE</option>
 				<option>PS2</option>
@@ -62,13 +98,13 @@
 				<option>N 3DS</option>
 			</select><br>
 			<label>N° JUGADORES:</label>
-			<select name="jugadores-juego">
-				<option selected hidden>Seleccionar...</option>
+			<select required name="jugadores-juego">
+				<option value="" selected hidden>Seleccionar...</option>
 				<option>1</option>
 				<option>1 - 2</option>
 				<option>1 - 4</option>
 			</select><br>
-			<button class="success">AGREGAR</button><button id="cancel-add" class="danger">CANCELAR</button>
+			<button type="submit" class="success">AGREGAR</button><button id="cancel-add" class="danger">CANCELAR</button>
 		</form>
 	</div>
 	<div id="boardEdit">
