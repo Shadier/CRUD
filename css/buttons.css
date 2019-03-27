@@ -1,4 +1,13 @@
+
+button{
+	padding: 20px;
+	cursor: pointer;
+	border: 0px;
+	outline: none;
+}
+
 .btn-circle{
+	padding: 0px;
 	vertical-align: middle;
 	border-radius: 1000px;
 	background-color: red;
@@ -8,11 +17,6 @@
 	max-height: 45px;
 }
 
-button{
-	cursor: pointer;
-	border: 0px;
-	outline: none;
-}
 button img{
 	vertical-align: middle;
 }

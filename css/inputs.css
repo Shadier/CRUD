@@ -1,0 +1,39 @@
+label{
+	text-align: left;
+	box-sizing: border-box;
+	color: var(--secundario);
+	font-size: 17px;
+	font-weight: bold;
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 3px;
+	min-width: 100%;
+	width: 100%;
+	max-width: 100%;
+	font-size: 15px;
+	padding-left: 5px;
+    margin-bottom: 5px !important;
+}
+
+input[type="text"],
+select{
+	box-sizing: border-box;
+	color: #666;
+	font-size: 16px;
+	font-weight: normal;
+	border-radius: var(--bradius);
+	border: 2px solid gray;
+	outline-color: var(--resalte);
+	padding: 10px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	min-width: 100%;
+	width: 100%;
+	max-width: 100%;
+}
+
+form{
+	min-width: 100px;
+	width: 80%;
+	max-width: 400px;
+}

@@ -4,6 +4,11 @@
 	margin: 0px;
 }
 
+body{
+	overflow: hidden;
+	max-width: 100%;
+}
+
 #board{
 	overflow-y: auto;
 	text-align: center;
@@ -11,9 +16,51 @@
 	display: inline-block;
 	min-width: 100%;
 	max-width: 100%;
-	min-height: calc(100% - 90px);
-	max-height: calc(100% - 90px);
+	min-height: calc(100% - 65px);
+	max-height: calc(100% - 65px);
 	top: 50px;
+}
+
+#boardAdd{
+	background-color: white;
+	overflow-y: auto;
+	text-align: center;
+	position: absolute;
+	display: inline-block;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: calc(100% - 65px);
+	max-height: calc(100% - 65px);
+	top: 50px;
+	left: 100%;
+	z-index: 20000;
+	transition: all 0.3s;
+}
+#boardAdd.show{
+	left: 0px;
+	z-index: 20000;
+	transition: all 0.3s;
+}
+
+#boardEdit{
+	background-color: white;
+	overflow-y: auto;
+	text-align: center;
+	position: absolute;
+	display: inline-block;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: calc(100% - 65px);
+	max-height: calc(100% - 65px);
+	top: 50px;
+	left: 100%;
+	z-index: 20000;
+	transition: all 0.3s;
+}
+#boardEdit.show{
+	left: 0px;
+	z-index: 20000;
+	transition: all 0.3s;
 }
 
 footer{
@@ -36,4 +83,57 @@ footer{
 	bottom: 25px;
 	right: 15px;
 	background-color: var(--secundario);
+	-webkit-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+	transition: all 0.5s;
 }
+#btn-add:hover{
+	-webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 7px -2px rgba(0,0,0,1);
+	box-shadow: 0px 0px 7px -2px rgba(0,0,0,1);
+	transition: all 0.5s;
+}
+
+.rotar{
+	transform: rotate(225deg);
+	transition: all 0.5s;
+}
+
+
+
+#frm-editar,
+#frm-add{
+	display: inline-block;
+	margin-top: 15px;
+	text-align: left;
+}
+
+	#frm-editar h4,
+	#frm-add h4{
+		display: block;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	
+	#frm-editar button,
+	#frm-add button{
+		border-radius: var(--bradius);
+		margin-top: 15px;
+		margin-bottom: 25px;
+		display: inline-block;
+		min-width: 49%;
+		width: 49%;
+		max-width: 49%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		color: white;
+		background-color: var(--cuarto);
+	}
+	#frm-editar button:hover,
+	#frm-add button:hover{
+		background-color: #41A2FF;
+	}
+	.success{
+		margin-right: 2%;
+	}
