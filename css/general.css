@@ -9,6 +9,15 @@ body{
 	max-width: 100%;
 }
 
+h6{
+	position: absolute;
+	display: block;
+	text-align: center;
+	min-width: 100%;
+	top: 47%;
+	color: gray;
+}
+
 #board{
 	overflow-y: auto;
 	text-align: center;

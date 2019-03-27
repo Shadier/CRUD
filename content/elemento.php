@@ -2,9 +2,11 @@
 	require_once './db/consultas.php';
 	$sql = "SELECT * FROM game;";
 	$rs = mysqli_query($con, $sql);
+	$count = 0;
 	while ($fila = mysqli_fetch_array($rs)) :
-
+		$count++;
 ?>
+<div class="row">
 <div class="elemento">
 	<div class="data">
 		<div class="name">
@@ -23,8 +25,13 @@
 	</div><div class="delete" id="<?php echo $fila['id']; ?>">
 		<img src="./images/delete.png">
 	</div>
-</div><br>
-
+</div>
+</div>
 <?php 
 	endwhile;
+	if ($count < 1):
+?>
+	<H6>NO HAY NINGÚN ELEMENTO AGREGADO</H6>
+<?php
+	endif;
 ?>

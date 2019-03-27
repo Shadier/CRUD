@@ -1,3 +1,6 @@
+var id_to_delete = 0;
+var element;
+
 $("#btn-add").click(function(event) {
 	event.preventDefault();
 	$(this).toggleClass("rotar");
@@ -54,6 +57,27 @@ $("#cancel-dialogo").click(function(event){
 	$("#opaque").removeClass("show");
 	setTimeout("closeopaque()", 500);
 });
+$("#yes-dialogo").click(function(event){
+	event.preventDefault();
+	$("#dialogo").removeClass("show");
+	$("#opaque").removeClass("show");
+	setTimeout("closeopaque()", 500);
+	//llamar ajax que elimina
+	$.ajax({
+	    type: 'GET',
+	    url: "db/delete_juego.php?id="+id_to_delete,
+	    contentType: false,
+	    processData: false,
+	    cache: false, 
+	    // Mostramos un mensaje con la respuesta de PHP
+	    success: function(data) {
+	    	$("#alerta").text(data);
+	      	$("#alerta").addClass("show");
+	      	element.remove();
+			setTimeout("closealert()", 2500);
+	    }
+	 });
+});
 
 function closeopaque(){
 	$("#opaque").css('cssText', 'display: none;');
@@ -64,4 +88,16 @@ $("#board").on("click",".delete", function(event) {
 	$("#opaque").css('cssText', 'display: inline-block;');
 	$("#dialogo").addClass("show");
 	$("#opaque").addClass("show");
+	id_to_delete = $(this).attr("id");
+	element = $(this).parent().parent();
 });
+$("#opaque").click(function(event){
+	event.preventDefault();
+	$("#dialogo").removeClass("show");
+	$("#opaque").removeClass("show");
+	setTimeout("closeopaque()", 500);
+});
+
+function closealert(){
+	$("#alerta").removeClass("show");
+}

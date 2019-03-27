@@ -18,6 +18,9 @@
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 </head>
 <body>
+	<div id="alerta">
+		¡Elemento eliminado correctamente!
+	</div>
 	<div id="opaque"></div>
 	<div id="dialogo">
 		<div class="dialogo-cabecera">
@@ -25,7 +28,7 @@
 		</div>
 		<div class="dialogo-cuerpo">
 			<p>¿Seguro que deseas eliminar el elemento?</p>
-			<button>SI</button>
+			<button id="yes-dialogo">SI</button>
 			<button id="cancel-dialogo">NO</button>
 		</div>
 	</div>
