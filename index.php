@@ -58,34 +58,7 @@
 	</div>
 	<div id="boardEdit">
 		<form id="frm-editar" method="post" action="db/editar_juego.php">
-			<h4>EDITAR JUEGO</h4>
-			<label>NOMBRE:</label><br>
-			<input type="text" name="nombre-juego"><br>
-			<label>PLATAFORMA:</label><br>
-			<select>
-				<option selected hidden>Seleccionar...</option>
-				<option>XBOX 360</option>
-				<option>XBOX ONE</option>
-
-				<option>PS2</option>
-				<option>PS3</option>
-				<option>PS4</option>
-				<option>PSP</option>
-				<option>PSVITA</option>
-				<option>N SWITCH</option>
-				<option>GAME CUBE</option>
-				<option>GAMEBOY</option>
-				<option>N DS</option>
-				<option>N 3DS</option>
-			</select><br>
-			<label>N° JUGADORES:</label>
-			<select>
-				<option selected hidden>Seleccionar...</option>
-				<option>1</option>
-				<option>1 - 2</option>
-				<option>1 - 4</option>
-			</select><br>
-			<button class="success">GUARDAR</button><button id="cancel-edit" class="danger">CANCELAR</button>
+			
 		</form>
 	</div>
 	<footer>

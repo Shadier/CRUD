@@ -18,9 +18,9 @@
 				<?php echo $fila['players']; ?>
 			</div>
 		</div>
-	</div><div class="edit">
+	</div><div class="edit" id="<?php echo $fila['id']; ?>">
 		<img src="./images/edit.png">
-	</div><div class="delete">
+	</div><div class="delete" id="<?php echo $fila['id']; ?>">
 		<img src="./images/delete.png">
 	</div>
 </div><br>
