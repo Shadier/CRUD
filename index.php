@@ -11,12 +11,24 @@
 	<link rel="icon" type="image/png" href="./images/icono.png" />
 	<link rel="stylesheet" type="text/css" href="css/colores.css">
 	<link rel="stylesheet" type="text/css" href="css/inputs.css">
+	<link rel="stylesheet" type="text/css" href="css/dialogos.css">
 	<link rel="stylesheet" type="text/css" href="css/elementos.css">
 	<link rel="stylesheet" type="text/css" href="css/buttons.css">
 	<link rel="stylesheet" type="text/css" href="css/general.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 </head>
 <body>
+	<div id="opaque"></div>
+	<div id="dialogo">
+		<div class="dialogo-cabecera">
+			ADVERTENCIA
+		</div>
+		<div class="dialogo-cuerpo">
+			<p>¿Seguro que deseas eliminar el elemento?</p>
+			<button>SI</button>
+			<button id="cancel-dialogo">NO</button>
+		</div>
+	</div>
 	<div id="menu">
 		<div class="menu-logo">
 			My Games

@@ -47,3 +47,21 @@ $("#boardAdd").on("click","#cancel-add", function(event) {
 	$("#boardAdd").removeClass("show");
 	$("#btn-add").removeClass("rotar");
 });
+
+$("#cancel-dialogo").click(function(event){
+	event.preventDefault();
+	$("#dialogo").removeClass("show");
+	$("#opaque").removeClass("show");
+	setTimeout("closeopaque()", 500);
+});
+
+function closeopaque(){
+	$("#opaque").css('cssText', 'display: none;');
+}
+
+$("#board").on("click",".delete", function(event) {
+	event.preventDefault();
+	$("#opaque").css('cssText', 'display: inline-block;');
+	$("#dialogo").addClass("show");
+	$("#opaque").addClass("show");
+});
